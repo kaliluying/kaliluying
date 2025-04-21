@@ -3,12 +3,11 @@
 
 <!--   my-icons -->
 <p align="center">
-    <a href="https://github.com/BEPb/BEPb"><img src="https://img.shields.io/badge/status-updating-brightgreen.svg"></a>
+    <a href="https://github.com/kaliluying/kaliluying"><img src="https://img.shields.io/badge/status-updating-brightgreen.svg"></a>
     <a href="https://github.com/python/cpython"><img src="https://img.shields.io/badge/Python-3.10-FF1493.svg"></a>
-    <a href="https://github.com/BEPb/BEPb/graphs/contributors"><img src="https://img.shields.io/github/contributors/kaliluying/kaliluying?color=blue"></a>
-    <a href="https://github.com/BEPb/BEPb/stargazers"><img src="https://img.shields.io/github/stars/kaliluying/kaliluying.svg?logo=github"></a>
-    <a href="https://github.com/BEPb/BEPb/network/members"><img src="https://img.shields.io/github/forks/kaliluying/kaliluying.svg?color=blue&logo=github"></a>
-    <img src="https://visitor-badge.laobi.icu/badge?page_id=BEPb.BEPb" alt="visitors"/>   
+    <a href="https://github.com/kaliluying/upload-fuzz/graphs/contributors"><img src="https://img.shields.io/github/contributors/kaliluying/upload-fuzz?color=blue"></a>
+    <a href="https://github.com/kaliluying/upload-fuzz/stargazers"><img src="https://img.shields.io/github/stars/kaliluying/upload-fuzz.svg?logo=github"></a>
+    <a href="https://github.com/kaliluying/upload-fuzz/network/members"><img src="https://img.shields.io/github/forks/kaliluying/upload-fuzz.svg?color=blue&logo=github"></a>
 </p>
 
 <p align="left"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=kaliluying" alt="kaliluying" /></a> </p>
