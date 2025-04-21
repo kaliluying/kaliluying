@@ -12,7 +12,7 @@
 
 <p align="left"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=kaliluying" alt="kaliluying" /></a> </p>
 
-- 📝 I regularly write articles on [https://kaliluying.github.io/](https://kaliluying.github.io/)
+- 📝 I regularly write articles on [https://gmlblog.top/](https://gmlblog.top/)
 
 
 <!--   GitHub stats graph -->
