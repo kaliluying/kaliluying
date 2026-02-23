@@ -25,7 +25,6 @@
 
 **后端** · FastAPI · Django REST Framework · PostgreSQL · Redis
 
-**工具** · Docker · Git · FFmpeg · pytest
 
 </div>
 
