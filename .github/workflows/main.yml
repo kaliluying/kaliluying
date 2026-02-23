@@ -1,6 +1,5 @@
 name: Generate Snake
 
-# 触发条件：每6小时定时运行 + 手动触发
 on:
   schedule:
     - cron: "0 */6 * * *"
@@ -10,40 +9,26 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      # 检出代码（升级到v4版本）
       - uses: actions/checkout@v4
 
-      # 创建dist目录（确保输出目录存在）
       - name: Create dist directory
         run: mkdir -p dist
 
-      # 生成蛇形图（适配v3版本的参数格式）
       - uses: Platane/snk@v3
         id: snake-gif
         with:
-          github_user_name: sudoshivesh
-          # 核心修改：用outputs参数统一配置输出文件
+          github_user_name: kaliluying
           outputs: |
-            {
-              "dist/github-contribution-grid-snake.gif": {
-                "type": "gif",
-                "enabled": true
-              },
-              "dist/github-contribution-grid-snake.svg": {
-                "type": "svg",
-                "enabled": true
-              }
-            }
+            [
+              "dist/github-contribution-grid-snake.gif",
+              "dist/github-contribution-grid-snake.svg"
+            ]
 
-      # 查看构建状态（调试用）
-      - run: git status
-
-      # 推送文件到output分支
-      - name: Push snake files to output branch
+      - name: Push to output branch
         uses: crazy-max/ghaction-github-pages@v4
         with:
           target_branch: output
           build_dir: dist
-          commit_message: "Update snake animation [skip ci]"
+          commit_message: "Update snake [skip ci]"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
