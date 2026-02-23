@@ -1,44 +1,46 @@
 name: Generate Snake
 
-# Controls when the action will run. This action runs every 6 hours.
+# 触发条件：每6小时定时运行 + 手动触发
 on:
   schedule:
-    # every 6 hours
     - cron: "0 */6 * * *"
-  # This command allows us to run the Action automatically from the Actions tab.
   workflow_dispatch:
 
-# The sequence of runs in this workflow:
 jobs:
-  # This workflow contains a single job called "build"
   build:
-    # The type of runner that the job will run on
     runs-on: ubuntu-latest
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks repo under $GITHUB_WORKSPACE (修正拼写错误), so your job can access it
-      - uses: actions/checkout@v4  # 升级到最新稳定版
+      # 检出代码（升级到v4版本）
+      - uses: actions/checkout@v4
 
-      # 创建dist目录（防止目录不存在导致失败）
+      # 创建dist目录（确保输出目录存在）
       - name: Create dist directory
         run: mkdir -p dist
 
-      # Generates the snake (使用指定版本避免master分支的兼容性问题)
+      # 生成蛇形图（适配v3版本的参数格式）
       - uses: Platane/snk@v3
         id: snake-gif
         with:
           github_user_name: sudoshivesh
-          # these next 2 lines generate the files on a branch called "output". This keeps the main branch from cluttering up.
-          gif_out_path: dist/github-contribution-grid-snake.gif
-          svg_out_path: dist/github-contribution-grid-snake.svg
+          # 核心修改：用outputs参数统一配置输出文件
+          outputs: |
+            {
+              "dist/github-contribution-grid-snake.gif": {
+                "type": "gif",
+                "enabled": true
+              },
+              "dist/github-contribution-grid-snake.svg": {
+                "type": "svg",
+                "enabled": true
+              }
+            }
 
-      # show the status of the build. Makes it easier for debugging (if there's any issues).
+      # 查看构建状态（调试用）
       - run: git status
 
-      # Push the changes to output branch (修正推送逻辑，只推送dist目录到output分支)
+      # 推送文件到output分支
       - name: Push snake files to output branch
-        uses: crazy-max/ghaction-github-pages@v4  # 升级到最新稳定版
+        uses: crazy-max/ghaction-github-pages@v4
         with:
           target_branch: output
           build_dir: dist
