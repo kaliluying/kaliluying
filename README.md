@@ -28,20 +28,6 @@
 
 </div>
 
----
-
-### 📁 代表项目
-
-<div align="center">
-
-| 项目 | 描述 | 技术栈 |
-|------|------|--------|
-| [MyTools](https://github.com/kaliluying/MyTools) | 开发者工具集 | Vue 3 + TS + Django DRF + FFmpeg |
-| [knowledge-ai](https://github.com/kaliluying/knowledge-ai) | AI 知识库系统 | Vue 3 + Django + PostgreSQL + D3.js |
-| [vault](https://github.com/kaliluying/vault) | 安全密码管理 | FastAPI + Redis + cryptography |
-| [blog-ai](https://github.com/kaliluying/blog-ai) | AI 驱动博客 | FastAPI + Vue 3 + SQLAlchemy 2.0 |
-
-</div>
 
 ---
 
@@ -56,7 +42,8 @@
 
 ### 📝 博客
 
-- 📝 定期更新技术文章：[gmlblog.top](https://gmlblog.top/)
+- 📝 定期更新技术文章：[kaliluying.github.io](https://kaliluying.github.io/)
+- AI博客定时更新: [blog.gmlblog.top](https://blog.gmlblog.top/)
 
 ---
 
